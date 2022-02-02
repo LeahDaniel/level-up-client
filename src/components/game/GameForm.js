@@ -65,9 +65,9 @@ export const GameForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="gameType">Game Type: </label>
-                    <select type="number" name="skillLevel" className="form-control"
-                        value={currentGame.skillLevel}
+                    <label htmlFor="gameTypeId">Game Type: </label>
+                    <select type="number" name="gameTypeId" className="form-control"
+                        value={currentGame.gameTypeId}
                         onChange={changeGameState}
                     >
                         <option value="0">Choose a type</option>
