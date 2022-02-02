@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useHistory } from "react-router-dom"
-import { getGames } from "./GameManager.js"
+import { deleteGame, getGames } from "./GameManager.js"
 
 export const GameList = (props) => {
     const [games, setGames] = useState([])
@@ -26,6 +26,10 @@ export const GameList = (props) => {
                         <button onClick={ () => {
                             history.push({ pathname: `/games/edit/${game.id}` })
                         }}>Edit</button>
+                        <button onClick={() => {
+                            deleteGame(game.id)
+                                .then(setGames)
+                        }}>Delete</button>
                     </section>
                 })
             }
