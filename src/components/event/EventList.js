@@ -26,6 +26,9 @@ export const EventList = (props) => {
                         <div className="event__organizer">
                             Organized by {event.organizer.user.first_name} {event.organizer.user.last_name}
                         </div>
+                        <button onClick={ () => {
+                            history.push({ pathname: `/events/edit/${event.id}` })
+                        }}>Edit</button>
                     </section>
                 })
             }
